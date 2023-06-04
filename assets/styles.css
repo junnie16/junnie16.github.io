@@ -1,0 +1,384 @@
+:root {
+  --primary-color: #0162ff;
+  --primary-color-2: rgb(55, 129, 248);
+  --text-primary-color: #3c3f64;
+  --text-secondary-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Space Mono";
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-primary-color);
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+.bg {
+  background-image: url("images/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.info-section,
+.about-skills {
+  max-width: 1150px;
+  margin: 40px auto;
+}
+
+.info_title {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.info_subtitle {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.info_contact {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.info_contact i {
+  color: var(--primary-color);
+  width: 20px;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.info-section .info-wrap {
+  display: flex;
+  margin: 24px;
+}
+
+.info-wrap {
+  justify-content: center;
+}
+
+.info-wrap .info {
+  width: 600px;
+}
+
+.info-section .info-avatar svg {
+  height: 300px;
+  width: 300px;
+  fill: var(--primary-color);
+}
+
+.info-section .info-avatar svg image {
+  height: 70%;
+  width: 70%;
+}
+
+.about-skills {
+  display: flex;
+}
+
+.about-section {
+  flex: 2;
+  margin: 12px;
+}
+
+.about-section .about-wrap {
+  margin-top: 24px;
+}
+
+.otro-blockquote {
+  font-size: 1.2rem;
+  color: #828282;
+  padding: 1.2em 30px 1.2em 60px;
+  border-left: 8px solid var(--primary-color-2);
+  line-height: 1.6;
+  position: relative;
+  background: #ffffff;
+  white-space: pre-line;
+}
+
+.otro-blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: var(--primary-color-2);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.otro-blockquote::after {
+  content: "";
+}
+
+.skills-section {
+  flex: 1;
+  margin: 12px;
+}
+
+.skills-list {
+  margin-top: 24px;
+}
+
+.skill-item {
+  margin-top: 12px;
+}
+
+.skill-item-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.timeline ul {
+  margin-top: 24px;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  background: var(--primary-color-2);
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: var(--primary-color);
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 500px;
+  padding: 40px 20px;
+  background: #5797ff;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  border-radius: 5px;
+}
+
+.timeline ul li div time {
+  position: absolute;
+  background: var(--primary-color-2);
+  min-width: 150px;
+  padding: 0 12px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.timeline ul li div div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline ul li div div p {
+  text-align: center;
+}
+
+.timeline ul li div .discovery {
+  margin-right: 10px;
+}
+
+.timeline ul li:nth-of-type(odd) > div {
+  left: 45px;
+}
+
+.timeline ul li:nth-of-type(even) > div {
+  left: -539px;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li:nth-of-type(odd) time {
+  left: 24px;
+}
+
+.timeline ul li:nth-of-type(even) time {
+  right: 24px;
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.timeline ul li div { 
+  color: var(--text-secondary-color);
+  letter-spacing: -0.7px;
+}
+
+.timeline ul li div .job-location { 
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.timeline ul li div .job-desc { 
+  white-space: pre-line;
+  margin: 0;
+}
+.timeline ul li div .job-desc.bold { 
+ font-weight: bold;
+}
+
+.timeline ul li div .job-desc a { 
+  color: var(--text-secondary-color) !important;
+ }
+.timeline ul { 
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.timeline ul li {
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
+
+  .info-section .info-avatar svg {
+    height: 150px;
+    width: 150px;
+  }
+
+  .info-section,
+  .about-skills {
+    max-width: calc(100vw - 100px);
+    margin: 20px auto;
+  }
+
+  .info-wrap {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-wrap .info {
+    width: auto;
+  }
+
+  .about-skills {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-item-title {
+    font-size: 1.3rem;
+  }
+  .skill-item {
+    font-size: 1.2rem;
+  }
+
+  .timeline ul li div {
+    width: calc(100vw / 2 - 100px);
+    flex-direction: column;
+  }
+
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+
+  .timeline ul li:nth-of-type(even) > div {
+    left: calc(-100vw / 2 + 60px);
+  }
+
+  .timeline ul li div { 
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .otro-blockquote {
+    padding: 1.2em 10px 1.2em 40px;
+  }
+
+  .info-section .info-avatar svg {
+    height: 100px;
+    width: 100px;
+  }
+
+  .info-section,
+  .about-skills {
+    max-width: calc(100vw);
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+
+  .info_title {
+    font-size: 30px;
+  }
+
+  .info_subtitle {
+    font-size: 24px;
+  }
+
+  .timeline ul li {
+    margin-left: 20px;
+    padding-bottom: 40px;
+  }
+
+  .timeline ul li div {
+    width: calc(100vw - 90px);
+  }
+
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+
+  .timeline ul li time {
+    left: 24px;
+  }
+}

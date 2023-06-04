@@ -1,318 +1,275 @@
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/font/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Junnie</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Junnie</title>
-  <style>
-    *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font: normal 10.6666666667px 'Titillium Web', sans-serif;
-    background: linear-gradient(54deg, #9164ff, #8bfff4);
-    color: #3c3f64;
-    overflow-x: hidden;
-    padding-bottom: 50px;
-}
-.timeline ul li {
-    list-style-type: none;
-    position: relative;
-    width: 6px;
-    margin: 0 auto;
-    padding-top: 50px;
-    background: #fff;
-}
-.timeline ul li::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) rotate(45deg);
-    width: 20px;
-    height: 20px;
-    z-index: 2;
-    background: #eee;
-}
-.timeline ul li div {
-    position: relative;
-    bottom: 0;
-    width: 500px;
-    height: 300px;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
-.timeline ul li div time {
-    position: absolute;
-    background: #f5af19;
-    width: 80px;
-    height: 30px;
-    top: -15px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 2px;
-}
-.timeline ul li div div {
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.timeline ul li div div p {
-    text-align: center;
-}
-.timeline ul li div .discovery {
-    margin-right: 10px;
-}
-.timeline ul li:nth-of-type(odd) > div {
-    left: 45px;
-}
-.timeline ul li:nth-of-type(even) > div {
-    left: -539px;
-}
-.timeline ul li div {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-.timeline ul li:nth-of-type(odd) div {
-    transform: translate3d(100px, -10px, 0) rotate(10deg);
-}
-.timeline ul li:nth-of-type(even) div {
-    transform: translate3d(-100px, -10px, 0) rotate(10deg);
-}
-.timeline ul li.in-view div {
-    transform: none;
-    visibility: visible;
-    opacity: 1;
-}
-.profile {
-  height: 800px;
-}
-@media screen and (max-width: 900px) {
-    .timeline ul li div {
-        width: 250px;
-        flex-direction: column;
-   }
-    .timeline ul li div div {
-        width: 80%;
-        margin: 10px;
-   }
-    .timeline ul li:nth-of-type(even) > div {
-        left: -289px;
-   }
-}
-@media screen and (max-width: 600px) {
-    body {
-        background: #8bfff4;
-   }
-    .timeline ul li {
-        margin-left: 20px;
-   }
-    .timeline ul li div {
-        width: calc(100vw - 91px);
-   }
-    .timeline ul li:nth-of-type(even) > div {
-        left: 45px;
-   }
-}
+  <body>
+    <div class="bg">
+    </div>
+    <section class="info-section">
+      <div class="info-wrap">
+        <div class="info">
+          <h1 class="info_title">Hi, I am Junnie</h1>
+          <p class="info_subtitle">UX/UI designer</p>
+          <p class="info_contact">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Bien Hoa, Dong
+            Nai, Viet Nam
+          </p>
+          <p class="info_contact">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <a href="mailto:pttuyetnhu16@gmail.com">pttuyetnhu16@gmail.com</a>
+          </p>
+          <p class="info_contact">
+            <i class="fa fa-phone" aria-hidden="true"></i> 0765083017
+          </p>
 
-  </style>
+          <p class="info_contact">
+            <i class="fa fa-download" aria-hidden="true"></i> <a target="_blank" href="./assets/TuyetNhuCV.pdf">Download my CV</a>
+          </p>
+        </div>
 
-  
-</head>
+        <div class="info-avatar">
+          <svg  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0" mask-type="alpha">
+        <path  d="M26.2,-36.4C33,-31.1,36.9,-22.2,38.8,-13.3C40.6,-4.5,40.5,4.3,38.5,13.1C36.5,22,32.7,30.8,25.9,34.9C19.2,39,9.6,38.3,0.5,37.6C-8.6,36.9,-17.2,36.2,-24.7,32.3C-32.2,28.5,-38.7,21.6,-41.8,13.2C-45,4.9,-44.9,-4.8,-41.2,-12.5C-37.4,-20.1,-30,-25.6,-22.6,-30.7C-15.1,-35.7,-7.5,-40.3,1.1,-41.7C9.7,-43.2,19.4,-41.7,26.2,-36.4Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;" />
 
-<body translate="no">
-  <section class="profile">
-    profile
-  </section>
-  <section class="timeline">
-    <ul>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-      <li class="">
-        <div>
-          <time>12-2012</time>
-        </div>
-      </li>
-    </ul>
-  </section>
+      </mask>
+
+      <g mask="url(#mask0)">
+        <path  d="M26.2,-36.4C33,-31.1,36.9,-22.2,38.8,-13.3C40.6,-4.5,40.5,4.3,38.5,13.1C36.5,22,32.7,30.8,25.9,34.9C19.2,39,9.6,38.3,0.5,37.6C-8.6,36.9,-17.2,36.2,-24.7,32.3C-32.2,28.5,-38.7,21.6,-41.8,13.2C-45,4.9,-44.9,-4.8,-41.2,-12.5C-37.4,-20.1,-30,-25.6,-22.6,-30.7C-15.1,-35.7,-7.5,-40.3,1.1,-41.7C9.7,-43.2,19.4,-41.7,26.2,-36.4Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;"/>
+        <image
+          x="14.5"
+          y="18.5"
+          href="./assets//images/avatar.png"
+        />
+      </g>
+      </svg>
 
 
-  <script>
-    var items = document.querySelectorAll(".timeline li");
-    console.log('xxxx', items)
-    function isElementInViewport(el) {
-      var rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
+          <!-- <svg
+            viewBox="0 0 200 187"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <mask id="mask0" mask-type="alpha">
+              <path
+                d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <path
+                d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+              />
+              <image
+                x="12"
+                y="18"
+                href="./assets//images/avatar.png"
+              />
+            </g>
+          </svg> -->
+        </div>
+      </div>
+    </section>
 
-    function callbackFunc() {
-      for (var i = 0; i < items.length; i++) {
-        if (isElementInViewport(items[i])) {
-          if(!items[i].classList.contains("in-view")){
-            items[i].classList.add("in-view");
-          }
-        } else if(items[i].classList.contains("in-view")) {
+    <section>
+      <div class="about-skills">
+        <section class="about-section">
+          <h2 class="section-title">About me</h2>
+    
+          <div class="about-wrap">
+            <p>
+              <blockquote class="otro-blockquote">I’m completely a freshman in the field of UI/UX with a flexible, self-motivated. I am also well-organized and patient. I would like to promote my knowledge and capacity for the position of UI/UX design staff at your company. Increasingly perfecting my skills to become a UI/UX designer in the future is my goal.
+              </blockquote>
+             
+            </p>
+          </div>
+        </section>
+    
+        <section class="skills-section">
+          <h2 class="section-title">Skills</h2>
+    
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-item-title">English</div>
+              <div class="skill-item-desc">Basic communicate</div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item-title">French</div>
+              <div class="skill-item-desc">Basic communicate</div>
+            </div>
+    
+            <div class="skill-item">
+              <div class="skill-item-title">Design tools</div>
+              <div class="skill-item-desc">Ai, Pts, Figma, Canvas, Capcut</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </section>
+    <section class="timeline">
+      <h2 class="section-title">My career paths</h2>
+      <ul>
+        <li>
+          <div>
+            <time>Sep 2012 - Aug 2016</time>
+            <p class="job-location">
+              Ho Chi Minh University of Education
+            </p>
+            <p class="job-desc bold">Student</p>
+            <p class="job-desc">Graduated with a bachelor's degree
+              in French in Tourism</p>
+          </div>
+        </li>
+
+        
+
+
+        <li>
+          <div>
+            <time>Apr 2015 - May 2016</time>
+            <p class="job-location">Miki Fashion Shop at Vincom District 2 Ho Chi Minh</p>
+            <p class="job-desc bold">Part-time Sales Staff & Assistant Manager.</p>
+            <p class="job-desc">- Sell for foreigners and Vietnamese at the Shop
+- Make the report for the Manager every day
+
+Achievements and skills gained:
+- Being active, extremely adaptable to business recognizing the environment
+- Observe, and learn customers’ tastes well
+- Improve English and French communication skills
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <time>Aug 2016 - Aug 2018</time>
+            <p class="job-location">
+              Indochina Tourist and Trade (IT&T) Ho Chi Minh City branch
+            </p>
+            <p class="job-desc bold">France Inbound Reservation and Customer Service</p>
+            <p class="job-desc">Main responsibilities:
+              - Check and read all the emails of customers from French company
+              - Book airline ticket, hotel, train, and restaurant when have required
+              - Make the report for Supervisor and Manager every day
+              - Solve customer complaints
+              - Check daily services
+              - Deal the price with suppliers and make the contract
+              In the low season:
+              - Making the survey and plans for the next seasons
+              - Visiting new destinations, and new restaurants and negotiating on price.
+              Recognition and Gains:
+              - Being active, motivated, and persuasive when taking responsibility for a job</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <time>Aug 2018 - Feb 2019</time>
+            <p class="job-location">
+              Replus Corporation
+            </p>
+            <p class="job-desc bold">Receptionist and Supporting Sales Team</p>
+            <p class="job-desc">Main responsibilities:
+              - Welcomes visitors by greeting them, receiving and answering or referring
+              inquiries.
+              - Keep the main email, telephone, and hotline of the company and reply to all the
+              complaints of customers.
+              - Take care of and set up the room: the meeting room, the living room,...
+              - Receive mail from Viet Nam and other countries.
+              - Supporting Sale Team (only foreigners)</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <time>Mar 2019 - Jan 2020</time>
+            <p class="job-location">
+              MT Solution Company
+            </p>
+            <p class="job-desc bold">Assistant</p>
+            <p class="job-desc">Main responsibilities:
+              - Making the contract or referring inquiries.
+              - Supporting the Director and making new plans for the new season
+              - Finding new partners and supplier chains for the company
+              - Checking and supporting Sale Team about the process of the plan
+              - Maintain and deal with customers</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <time>Sep 2021 - Present</time>
+            <p class="job-location">
+              University of Information and Technology
+            </p>
+            <p class="job-desc bold">Student</p>
+            <p class="job-desc">- Study: Design UX/UI, user interfaces, Business analyses, Information & Web Technology,...
+              - Attend the projects and completed the coursework</p>
+            <p class="job-desc">- Figma projects: <a target="_blank" href="https://www.figma.com/file/OxynJpjoVbt59Vky7FFlWo/App-du-l%E1%BB%8Bch?type=design&node-id=109-268">Travel Application</a></a></p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <time>Feb 2023 - Present</time>
+            <p class="job-location">
+              Keyframe multimedia school
+            </p>
+            <p class="job-desc bold">Student</p>
+            <p class="job-desc">- Learn how to use PhotoShop, AI, Figma</p>
+            <p class="job-desc">- July 2023: learn <a target="_blank" href="https://keyframe.vn/khoa-hoc-offline/khoa-hoc-thiet-ke-uxui-web-mobile-app-product-design-82.html">Web/Mobile UI/UX</a></p>
+            <p class="job-desc">- Figma projects: <a target="_blank" href="https://www.figma.com/file/3eAt8qJTAf1rJmMGHx6Qjq/Nh%C6%B0-Ph%E1%BA%A1m-(Ho%C3%A0n-ch%E1%BB%89nh)?type=design&node-id=2-26">Icons</a>, <a target="_blank" href="https://www.figma.com/file/3eAt8qJTAf1rJmMGHx6Qjq/Nh%C6%B0-Ph%E1%BA%A1m-(Ho%C3%A0n-ch%E1%BB%89nh)?type=design&node-id=231-13131">Online Store Mobile</a></p>
+            <p class="job-desc">- PhotoShop, AI projects: <a target="_blank" href="gallery.html">Gallery</a></p>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <script>
+      var items = document.querySelectorAll(".timeline li");
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            if (!items[i].classList.contains("in-view")) {
+              items[i].classList.add("in-view");
+            }
+          } else if (items[i].classList.contains("in-view")) {
             items[i].classList.remove("in-view");
+          }
         }
       }
-    }
-    
-    window.addEventListener("load", callbackFunc);
-    window.addEventListener("scroll", callbackFunc);
-  </script>
-</body>
 
+      window.addEventListener("load", callbackFunc);
+      window.addEventListener("scroll", callbackFunc);
+    </script>
+  </body>
 </html>
